@@ -26,7 +26,7 @@ public class LonelyTwitterActivity extends Activity {
 	
 	/** Called when the activity is first created. */
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
@@ -40,7 +40,26 @@ public class LonelyTwitterActivity extends Activity {
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
 				saveInFile(text, new Date(System.currentTimeMillis()));
-				finish();
+
+
+				tweet newTweet = new normalTweet("eyy");
+				ImportantTweet newTweet2= new ImportantTweet("eyy 2",new Date());
+				try {
+					newTweet.setMessage("ayy");
+				} catch (TweetTooLongException e) {
+					e.printStackTrace();
+				}
+				ArrayList<tweet> tweetList = new ArrayList<tweet>();
+
+
+				Mood currentMood = new badMood("sad");
+				Mood currentMood1 = new goodMood("Glad");
+				currentMood.getMood();
+
+
+
+
+				//finish();
 
 			}
 		});
