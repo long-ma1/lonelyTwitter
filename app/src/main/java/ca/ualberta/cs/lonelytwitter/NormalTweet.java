@@ -6,18 +6,26 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-    }
-}
+package ca.ualberta.cs.lonelytwitter;
 
-allprojects {
-    repositories {
-        jcenter()
+import java.util.Date;
+
+/**
+ * Created by malon_000 on 2017-09-26.
+ */
+
+public class NormalTweet extends tweet {
+    public NormalTweet(String message) {
+        super(message);
     }
+
+    public NormalTweet(String message, Date date) {
+        super(message, date);
+    }
+
+    @Override
+    public Boolean isImportant(){
+        return Boolean.FALSE;
+    }
+
 }

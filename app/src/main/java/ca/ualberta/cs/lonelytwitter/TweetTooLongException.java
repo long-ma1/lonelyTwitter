@@ -6,4 +6,11 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-include ':app'
+package ca.ualberta.cs.lonelytwitter;
+
+/**
+ * Created by malon_000 on 2017-09-26.
+ */
+
+public class TweetTooLongException extends Exception {
+}
